@@ -1,3 +1,14 @@
+def operation(operand, fNum, sNumb):
+    if oper == "+":  #The different conditions are checked 
+        res = fNumber + sNumber 
+    elif oper == "-":
+        res = fNumber - sNumber
+    elif oper == "*":
+        res = fNumber * sNumber
+    elif oper == "/":
+        res = fNumber / sNumber
+    return res
+
 operations = ['addition', 'subtraction', 'multiplication', 'division', 'square root']#create a list
 print("This is the list of operations:") #initial message
 operations.append('exponent')#new element on the list
@@ -23,3 +34,23 @@ print(fruitDir)
 fruitDir["color"] = "green"# modify one of the properties
 print("Its is the new list with the change of color:")# print the updated dictionary
 print(fruitDir) #final result
+print("-------------------------------------------------")
+
+sino= True
+print("Math operation:")
+while sino == True:         
+    oper = input(print("Chose one operation(+,-,/,*)"))
+    #validation operations
+    if oper == "+":  #if sum     
+        sino = False   
+    elif oper == "-": #if subs         
+        sino == False   
+    elif oper == "/": #if division           
+        sino == False         
+    elif oper == "*": #if multi
+        sino == False   
+    else:
+        print("Mistake")     
+fNumber = int(input(print("Write a number")))      
+sNumber = int(input(print("Write another number")))     
+print("The result is: " + str(operation(fNumber, sNumber, oper)))         
